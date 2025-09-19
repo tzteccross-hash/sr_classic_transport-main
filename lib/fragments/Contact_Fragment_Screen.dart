@@ -36,10 +36,10 @@ class _ContactFragmentScreenState extends State<ContactFragmentScreen> {
 
       if(res.statusCode == 200)
       {
-        var responseBodyOfAllClothes = jsonDecode(res.body);
-        if(responseBodyOfAllClothes["success"] == true)
+        var responseBodyOfAllContacts = jsonDecode(res.body);
+        if(responseBodyOfAllContacts["success"] == true)
         {
-          (responseBodyOfAllClothes["contactInfo"] as List).forEach((eachRecord)
+          (responseBodyOfAllContacts["contactInfo"] as List).forEach((eachRecord)
           {
             allContactList.add(contactInfo.fromJson(eachRecord));
           });
